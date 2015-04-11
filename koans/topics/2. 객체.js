@@ -30,7 +30,7 @@ test('오브젝트 만들기', function () {
 test('타입 알아내기', function () {
     equal(__, typeof true, 'true 값의 타입은 무엇일까요?');
     equal(__, typeof false, 'false 값의 타입은 무엇일까요?');
-    equal(__, '코딩하는 디자이너', '문자열 값의 타입은 무엇일까요?');
+    equal(__, typeof '코딩하는 디자이너', '문자열 값의 타입은 무엇일까요?');
     equal(__, typeof {}, '오브젝트의 타입은 무엇일까요?');
 
     // 아래는 생각해보는 문제입니다. 이해가 되면은 true 또는 이해했어요 값으로 바꿔주세요.
