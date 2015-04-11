@@ -6,7 +6,7 @@ test('덧셈, 뺄셈 복합 할당 연산자 사용해보기', function () {
     baz -= foo + bar;
 
     equal(__, bar, '변수 bar 값은 무엇일까요?');
-    baz(__, baz, '변수 baz 값은 무엇일까요?');
+    equal(__, baz, '변수 baz 값은 무엇일까요?');
 });
 
 test('곱셈, 나눗셈 복합 할당 연산자 사용해보기', function () {
@@ -15,7 +15,7 @@ test('곱셈, 나눗셈 복합 할당 연산자 사용해보기', function () {
     baz /= foo;
 
     equal(__, bar, '변수 bar 값은 무엇일까요?');
-    baz(__, baz, '변수 baz 값은 무엇일까요?');
+    equal(__, baz, '변수 baz 값은 무엇일까요?');
 });
 
 test('비교 연산자', function () {
