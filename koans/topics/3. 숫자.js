@@ -3,7 +3,7 @@ module('숫자');
 test('문자를 숫자로 바꾸기', function() {
     var foo = '39482';
 
-    equal(typeof foo, 'number', '문자열을 숫자로 바꿀 수 있는 메서드는 무엇일까요?');
+    equal(__, 39482, 'foo 값을 숫자로 바꿀 수 있는 메서드는 무엇일까요?');
 });
 
 test('NaN 알아내기', function () {
