@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../stylesheets/screen.css"/>
+    <link rel="stylesheet" href="../stylesheets/main.css"/>
+</head>
+<body id="scroll">
+<div id="parallex" class="flex">
+    <div>
+        <h1>Forest</h1>
+        <div class="value">0</div>
+    </div>
+</div>
+<div id="height"></div>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+    var currentPage = 0;
+    $(document).scroll(function (e) {
+        var scrollTop = $(this).scrollTop();
+        $('.value').text(scrollTop);
+
+        if (scrollTop < 1000) {
+            if (currentPage === 1) {
+                retrn;
+            }
+
+            $('h1').text('Forest');
+            $('#parallex').css('background-image', 'url("images/1.jpg")');
+            currentPage = 1;
+            console.log(currentPage);
+        } else if (scrollTop < 2000) {
+            if (currentPage === 2) {
+                return;
+            }
+
+            $('h1').text('Reeds');
+            $('#parallex').css('background-image', 'url("images/2.jpg")');
+            currentPage = 2;
+            console.log(currentPage);
+        } else if (scrollTop < 3000) {
+            if (currentPage === 3) {
+                return;
+            }
+
+            $('h1').text('Up In The Air');
+            $('#parallex').css('background-image', 'url("images/3.jpg")');
+            currentPage = 3;
+            console.log(currentPage);
+        } else if (scrollTop < 4000) {
+            if (currentPage === 4) {
+                return;
+            }
+
+            $('h1').text('Road');
+            $('#parallex').css('background-image', 'url("images/4.jpg")');
+            currentPage = 4;
+            console.log(currentPage);
+        } else if (scrollTop < 5000) {
+            if (currentPage === 5) {
+                return;
+            }
+
+            $('h1').text('Sky');
+            $('#parallex').css('background-image', 'url("images/5.jpg")');
+            currentPage = 5;
+            console.log(currentPage);
+        } else if (scrollTop < 6000) {
+            if (currentPage === 6) {
+                return;
+            }
+
+            $('h1').text('Thinking');
+            $('#parallex').css('background-image', 'url("images/6.jpg")');
+            currentPage = 6;
+        } else if (scrollTop < 7000) {
+            if (currentPage === 7) {
+                return;
+            }
+
+            $('h1').text('Sports');
+            $('#parallex').css('background-image', 'url("images/7.jpg")');
+            currentPage = 7;
+            console.log(currentPage);
+        } else if (scrollTop < 8000) {
+            if (currentPage === 8) {
+                return;
+            }
+
+            $('h1').text('Tropical');
+            $('#parallex').css('background-image', 'url("images/8.jpg")');
+            currentPage = 8;
+            console.log(currentPage);
+        } else if (scrollTop < 9000) {
+            if (currentPage === 9) {
+                return;
+            }
+
+            $('h1').text('Night');
+            $('#parallex').css('background-image', 'url("images/9.jpg")');
+            currentPage = 9;
+            console.log(currentPage);
+        } else {
+            if (currentPage === 10) {
+                return;
+            }
+
+            $('h1').text('Mail Box');
+            $('#parallex').css('background-image', 'url("images/10.jpg")');
+            currentPage = 10;
+            console.log(currentPage);
+        }
+    });
+</script>
+</body>
+</html>

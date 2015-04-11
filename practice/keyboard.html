@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../stylesheets/screen.css"/>
+    <link rel="stylesheet" href="../stylesheets/main.css"/>
+</head>
+<body id="keyboard" class="flex">
+<div>
+    <h2>You just pressed this key</h2>
+    <h1><-</h1>
+    <div class="items">
+        <div class="flex">
+            <img src="../images/1.jpg" alt="" class="item active"/>
+            <img src="../images/2.jpg" alt="" class="item"/>
+            <img src="../images/3.jpg" alt="" class="item"/>
+            <img src="../images/4.jpg" alt="" class="item"/>
+            <img src="../images/5.jpg" alt="" class="item"/>
+            <img src="../images/6.jpg" alt="" class="item"/>
+            <img src="../images/7.jpg" alt="" class="item"/>
+            <img src="../images/8.jpg" alt="" class="item"/>
+            <img src="../images/9.jpg" alt="" class="item"/>
+            <img src="../images/10.jpg" alt="" class="item"/>
+        </div>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+    (function () {
+        var currentSelectedItem = 0, position = [];
+
+        (function () {
+            $('.item').each(function (index) {
+                var $item = $(this);
+                position.push($item.position().left);
+            });
+        }());
+
+        function moveToLeft() {
+            if (currentSelectedItem === 0 || $('.items').is(':animated')) {
+                return;
+            }
+
+            currentSelectedItem -= 1;
+            $('.item').removeClass('active');
+            $('.item').eq(currentSelectedItem).addClass('active');
+            $('.items').animate({scrollLeft: position[currentSelectedItem]}, 500);
+        }
+
+        function moveToRight() {
+            if (currentSelectedItem === 9 || $('.items').is(':animated')) {
+                return;
+            }
+
+            currentSelectedItem += 1;
+            $('.item').removeClass('active');
+            $('.item').eq(currentSelectedItem).addClass('active');
+            $('.items').animate({scrollLeft: position[currentSelectedItem]}, 500);
+        }
+
+        $(document).keydown(function (e) {
+            var h1 = $('h1');
+
+            if (e.keyCode === 37) {
+                h1.text('<-');
+                moveToLeft();
+                return;
+            } else if (e.keyCode === 39) {
+                h1.text('->');
+                moveToRight();
+                return;
+            } else if (e.keyCode === 13) {
+                h1.text('Return');
+                return;
+            }
+
+            h1.text(String.fromCharCode(e.keyCode));
+        });
+    }());
+</script>
+</body>
+</html>
