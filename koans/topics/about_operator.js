@@ -53,3 +53,13 @@ test('OR (||) 연산자', function () {
 
     ok(만원으로 || 과자도 || 라면도 || 콜라도 || 살수있다, 'OR 연산자는 하나의 값이라도 참이 포함되어 있는지 확인할 수 있습니다.')
 });
+
+test('증감 연산자', function () {
+    var foo = 1;
+    var bar = foo++;
+    var baz = foo;
+
+    equal(__, bar, '바 값은 얼마일까요?');
+    equal(__, baz, '바즈 값은 얼마일까요?');
+    equal(__, foo, '푸 값은 얼마일까요?');
+});
